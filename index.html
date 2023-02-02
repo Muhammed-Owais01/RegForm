@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="registrationstyle.css">
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<p>Please fill out this form with the required information</p>
+	<!-- Post method sends name-value pairs in body while Get method appends the data at the end of the url and then send that, post is good for alot of data -->
+	<form action="https://register-demo.freecodecamp.org" method="post">
+		<fieldset>
+			<label for="first-name">Enter Your First Name: <input id="first-name" type="text" name="first-name" required></label>
+			<label for="second-name">Enter Your Second Name: <input id="second-name" type="text" name="last-name" required></label>
+			<label for="email">Enter Your Email: <input id="email" type="email" name="email" required></label>
+			<label for="new-password">Create a New Password: <input id="new-password" type="password" name="new-password" pattern="[a-z0-5]{8,}" required></label> <!-- minlength could be used to set a length limit, or here a pattern attribute -->
+		</fieldset>
+		<fieldset>
+			<label for="personal-account">
+				<input type="radio" id="personal-account" name="account-type" class="inline"> Personal Account <!-- name="account-type" is used to link both accounts so that only one can be selected at a time -->
+			</label>
+			<label for="business-account"><input type="radio" id="business-account" name="account-type" class="inline"> Business Account</label>
+			<label for="terms-and-conditions"><input type="checkbox" id="terms-and-conditions" class="inline" required> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+		</fieldset>
+		<fieldset>
+			<!-- type="file" allows users to upload pictures/documents, files basically -->
+			<label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="picture"></label>
+			<!-- min and max are the ranges in which a person can input -->
+			<label for="age">Input your age (years): <input id="age" type="number" min="8" max="120" name="age"></label>
+			<label for="reccommendation">How did you hear about us?
+				<!-- select is used to create a dropdown menu -->
+				<select id="reccommendation">
+					<!-- option is used to give the options of the dropdown menu -->
+					<!-- value is what is returned to the server when an option is selected -->
+					<option value="">(select one)</option>
+					<option value="1">freeCodeCamp News</option>
+					<option value="2">freeCodeCamp YouTube Channel</option>
+					<option value="3">freeCodeCamp Forum</option>
+					<option value="4">Other</option>
+				</select>
+			</label>
+			<label for="bio">Provide a bio:
+				<!-- text area element allows user to type multiple lines of text -->
+				<!-- rows and cols increase the width of the type area -->
+				<textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+			</label>
+		</fieldset>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

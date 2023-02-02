@@ -1,0 +1,82 @@
+body {
+	width: 100%;
+	height: 100vh;
+	margin: 0; /* Removes the scroll bars */
+	background-color: #1b1b32;
+	color: #f5f6f7; /* Text color */
+	font-family: Tahoma;
+	font-size: 16px;
+}
+label {
+	display: block;
+	margin: 0.5rem 0;
+}
+h1, p {
+	text-align: center;
+	margin: 1em auto;
+}
+form {
+	margin: 0 auto;
+	/* take 60vw width of the max width assigned to it */
+	width: 60vw;
+	max-width: 500px;
+	min-width: 300px;
+	/* To make some space at the end for submit button, so it isnt at the bottom of the page */
+	padding-bottom: 2em;
+}
+fieldset {
+	/* Removing the white borders it created */
+	border: none;
+	padding: 2rem 0;
+	border-bottom: 3px solid #3b3b4f;
+}
+fieldset:last-of-type {
+	/* anyelement:last-of-type to access the last element */
+	/* The last border looked wierd as it was sticking with submit, so we removed it */
+	border-bottom: none; 
+}
+input, select, textarea {
+	/* width:100% makes the input area take the whole width assigned to it thus shifting the text with it upwards */
+	width: 100%;
+	/* Increases the space between the text and input areas */
+	margin: 10px 0 0 0;
+	/* limiting the height of the input areas */
+	min-height: 2em;
+}
+.inline {
+	/* I dont want the radio inputs to take whole line, so we set its widht to unset */
+	width: unset;
+	/* adding a small space to right between text and radio */
+	margin: 0 0.5em 0 0;
+	/* making the radio circles align nicely */
+	vertical-align: middle;
+}
+input, textarea {
+	background-color: #0a0a23;
+	border: 1px solid #0a0a23;
+	color: #ffffff;
+}
+input[type="submit"] {
+	/* making submit button look nice */
+	background-color: #3b3b4f;
+	width: 60%;
+	display: block;
+	margin: 1em auto;
+	border-color: #ffffff;
+	height: 2em;
+	font-size: 1.1rem;
+	max-width: 300px;
+}
+input[type="submit"]:hover {
+	background-color: #46465d;
+}
+input[type="submit"]:active {
+	background-color: #767699;
+}
+input[type="file"] {
+	/* the input type file doesnt not have default padding the other inputs have, so we manually give it default padding 1px 2px */
+	padding: 1px 2px;
+}
+a {
+	color: #dfdfe2;
+}
